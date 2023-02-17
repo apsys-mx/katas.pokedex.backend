@@ -20,5 +20,10 @@ namespace katas.pokedex.repositories.nhibernate
             ISQLQuery query = this._session.CreateSQLQuery("DELETE FROM pokemons");
             query.ExecuteUpdate();
         }
+
+        public IEnumerable<Pokemon> GetPaginated(int pageNumber, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

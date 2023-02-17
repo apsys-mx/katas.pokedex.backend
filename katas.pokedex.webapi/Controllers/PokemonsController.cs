@@ -22,9 +22,11 @@ namespace katas.pokedex.webapi.Controllers
 
 
         [HttpGet]
-        public IActionResult GetPokemons()
+        public IActionResult GetPokemons([FromQuery] int pageNumber = 1, [FromQuery] int pageSize= 20)
         {
-            return Ok("All pokemons");
+            var command = new GetPokemonsServices.Command(pageNumber, pageSize);
+            var results = this.mediator.Send(command).Result;
+            return Ok(results);
         }
 
         [HttpGet, Route("{id}")]

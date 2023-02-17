@@ -10,5 +10,6 @@ namespace katas.pokedex.repositories
     public interface IPokemonRepository : IRepository<Pokemon>
     {
         void Delete();
+        IEnumerable<Pokemon> GetPaginated(int pageNumber, int pageSize);
     }
 }
