@@ -29,10 +29,14 @@ namespace katas.pokedex.webapi.Controllers
             return Ok(results);
         }
 
-        [HttpGet, Route("{id}")]
-        public IActionResult GetPokemonById(string id)
+        [HttpGet, Route("{name}")]
+        public IActionResult GetPokemonById(string name)
         {
-            return Ok(id);
+            var command = new GetPokemonByName.Command(name);
+            var result = this.mediator.Send(command).Result;
+            if (result == null)
+                return NotFound($"No pokemon found with name {name}");
+            return Ok(result);
         }
 
         [HttpPost]
