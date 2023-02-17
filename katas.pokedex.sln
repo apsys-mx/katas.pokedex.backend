@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex.webapi", "katas.pokedex.webapi\katas.pokedex.webapi.csproj", "{E053BD71-4190-4F58-90D6-07943D62FDDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex.services", "katas.pokedex.services\katas.pokedex.services.csproj", "{324004A2-99D6-4A46-B7B7-7B76F0729962}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex", "katas.pokedex\katas.pokedex.csproj", "{A19825B0-C95C-45EF-BB3F-453925050799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E053BD71-4190-4F58-90D6-07943D62FDDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E053BD71-4190-4F58-90D6-07943D62FDDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E053BD71-4190-4F58-90D6-07943D62FDDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E053BD71-4190-4F58-90D6-07943D62FDDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{324004A2-99D6-4A46-B7B7-7B76F0729962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324004A2-99D6-4A46-B7B7-7B76F0729962}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324004A2-99D6-4A46-B7B7-7B76F0729962}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324004A2-99D6-4A46-B7B7-7B76F0729962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A19825B0-C95C-45EF-BB3F-453925050799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A19825B0-C95C-45EF-BB3F-453925050799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A19825B0-C95C-45EF-BB3F-453925050799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A19825B0-C95C-45EF-BB3F-453925050799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FE76237-D0FC-4BCF-99C6-8344387B4E8A}
+	EndGlobalSection
+EndGlobal
