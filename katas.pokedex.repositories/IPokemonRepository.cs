@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace katas.pokedex.repositories
 {
     public interface IPokemonRepository : IRepository<Pokemon>
-    {        
+    {
+        void Delete();
     }
 }

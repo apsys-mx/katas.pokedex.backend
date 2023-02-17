@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using katas.pokedex.services.pokemons;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,5 +38,14 @@ namespace katas.pokedex.webapi.Controllers
         {
             return Ok("Create");
         }
+
+        [HttpPost, Route("init")]
+        public async Task<IActionResult> Initialize()
+        {
+            var command = new InitializeDatabase.Command();
+            await this.mediator.Send(command);
+            return Ok();
+        }
+
     }
 }

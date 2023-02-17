@@ -36,17 +36,23 @@ namespace katas.pokedex.repositories.nhibernate
 
         public void Commit()
         {
-            throw new NotImplementedException();
+            if (this.transaction != null && this.transaction.IsActive)
+                this.transaction.Commit();
+            else
+                throw new TransactionException("The actual transaction is not longer active");
         }
 
         public void ResetTransaction()
         {
-            throw new NotImplementedException();
+            this.transaction = this.session.BeginTransaction();
         }
 
         public void Rollback()
         {
-            throw new NotImplementedException();
+            if (this.transaction != null && this.transaction.IsActive)
+                this.transaction.Rollback();
+            else
+                throw new TransactionException("The actual transaction is not longer active");
         }
     }
 }

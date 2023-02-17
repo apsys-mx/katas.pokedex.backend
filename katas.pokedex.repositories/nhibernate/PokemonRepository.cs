@@ -14,5 +14,11 @@ namespace katas.pokedex.repositories.nhibernate
             : base(session)
         {
         }
+
+        public void Delete()
+        {
+            ISQLQuery query = this._session.CreateSQLQuery("DELETE FROM pokemons");
+            query.ExecuteUpdate();
+        }
     }
 }

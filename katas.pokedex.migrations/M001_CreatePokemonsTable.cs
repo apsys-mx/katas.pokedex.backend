@@ -20,7 +20,7 @@ namespace katas.pokedex
         {
             Create.Table("pokemons")
                 .WithColumn("id").AsString().PrimaryKey()
-                .WithColumn("code").AsString().NotNullable()
+                .WithColumn("code").AsInt32().NotNullable()
                 .WithColumn("name").AsString().NotNullable();
         }
     }
