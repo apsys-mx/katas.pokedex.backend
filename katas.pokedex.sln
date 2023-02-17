@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex.services", "k
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex", "katas.pokedex\katas.pokedex.csproj", "{A19825B0-C95C-45EF-BB3F-453925050799}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex.repositories", "katas.pokedex.repositories\katas.pokedex.repositories.csproj", "{7DDAD46E-F6CD-4596-9988-3EEB8B2D5F83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "katas.pokedex.migrations", "katas.pokedex.migrations\katas.pokedex.migrations.csproj", "{D3432BCD-ADAD-4B57-A6C2-62492FCAE54D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{A19825B0-C95C-45EF-BB3F-453925050799}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A19825B0-C95C-45EF-BB3F-453925050799}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A19825B0-C95C-45EF-BB3F-453925050799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DDAD46E-F6CD-4596-9988-3EEB8B2D5F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DDAD46E-F6CD-4596-9988-3EEB8B2D5F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DDAD46E-F6CD-4596-9988-3EEB8B2D5F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDAD46E-F6CD-4596-9988-3EEB8B2D5F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3432BCD-ADAD-4B57-A6C2-62492FCAE54D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3432BCD-ADAD-4B57-A6C2-62492FCAE54D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3432BCD-ADAD-4B57-A6C2-62492FCAE54D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3432BCD-ADAD-4B57-A6C2-62492FCAE54D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

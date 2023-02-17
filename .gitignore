@@ -5,3 +5,7 @@
 /katas.pokedex.webapi/obj
 /katas.pokedex.webapi/bin
 /.vs
+/katas.pokedex.migrations/bin
+/katas.pokedex.migrations/obj
+/katas.pokedex.repositories/obj
+/katas.pokedex.repositories/bin

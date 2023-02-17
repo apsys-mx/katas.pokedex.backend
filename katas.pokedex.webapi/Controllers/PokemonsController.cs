@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace katas.pokedex.webapi.Controllers
@@ -11,6 +12,13 @@ namespace katas.pokedex.webapi.Controllers
     [ApiController]
     public class PokemonsController : ControllerBase
     {
+        private readonly IMediator mediator;
+
+        public PokemonsController(IMediator mediator)
+        {
+            this.mediator = mediator;
+        }
+
 
         [HttpGet]
         public IActionResult GetPokemons()

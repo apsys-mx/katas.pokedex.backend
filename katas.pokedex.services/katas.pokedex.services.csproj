@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\katas.pokedex.repositories\katas.pokedex.repositories.csproj" />
     <ProjectReference Include="..\katas.pokedex\katas.pokedex.csproj" />
   </ItemGroup>
 
