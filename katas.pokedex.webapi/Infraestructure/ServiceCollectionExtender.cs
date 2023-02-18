@@ -42,7 +42,7 @@ namespace katas.pokedex.webapi
 
         private static string[] GetAllowedCorsOrigins(IConfiguration configuration)
         {
-            var allowedOrigins = configuration.GetSection("CorsConfiguration:AllowedOrigins").Value;
+            var allowedOrigins = configuration.GetSection("AllowedHosts").Value;
             if (string.IsNullOrEmpty(allowedOrigins))
                 throw new Exception($"No CORS configuration found in the configuration file");
             return allowedOrigins.Split(",");

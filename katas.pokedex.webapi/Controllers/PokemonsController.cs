@@ -26,7 +26,8 @@ namespace katas.pokedex.webapi.Controllers
         {
             var command = new GetPokemonsServices.Command(pageNumber, pageSize);
             var results = this.mediator.Send(command).Result;
-            return Ok(results);
+            var pagination = new PaginationResult<Pokemon>(pageNumber, pageSize, results.Items, results.Count);
+            return Ok(pagination);
         }
 
         [HttpGet, Route("{name}")]

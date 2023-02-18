@@ -15,7 +15,7 @@ namespace katas.pokedex.services.pokemons
         /// <summary>
         /// Command class
         /// </summary>
-        public class Command : IRequest<IEnumerable<Pokemon>>
+        public class Command : IRequest<GetManyAndCountResult<Pokemon>>
         {
 
             public Command(int pageNumber, int pageSize)
@@ -31,7 +31,7 @@ namespace katas.pokedex.services.pokemons
         /// <summary>
         /// Handler class
         /// </summary>
-        public class Handler : IRequestHandler<Command, IEnumerable<Pokemon>>
+        public class Handler : IRequestHandler<Command, GetManyAndCountResult<Pokemon>>
         {
             private readonly IUnitOfWork uoW;
 
@@ -40,11 +40,13 @@ namespace katas.pokedex.services.pokemons
                 this.uoW = uoW;
             }
 
-            public Task<IEnumerable<Pokemon>> Handle(Command request, CancellationToken cancellationToken)
+            public Task<GetManyAndCountResult<Pokemon>> Handle(Command request, CancellationToken cancellationToken)
             {
                 SortingCriteria sorting = new SortingCriteria("code", SortingCriteriaType.Ascending);
                 var pokemons = this.uoW.Pokemons.Get(request.PageNumber, request.PageSize, sorting);
-                return Task.FromResult(pokemons);
+                var count = this.uoW.Pokemons.Count();
+                var result = new GetManyAndCountResult<Pokemon>(pokemons, count);
+                return Task.FromResult(result);
             }
         }
     }
