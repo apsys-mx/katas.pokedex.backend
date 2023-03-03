@@ -11,5 +11,7 @@ namespace katas.pokedex.repositories
     {
         void Delete();
         IEnumerable<Pokemon> GetPaginated(int pageNumber, int pageSize);
+        Pokemon GetByCode(int code);
+        Pokemon Add(int code, string name);
     }
 }

@@ -40,10 +40,19 @@ namespace katas.pokedex.webapi.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        public IActionResult CreatePokemon()
+        [HttpPost, Route("{name}")]
+        public IActionResult CreatePokemon(string name)
         {
-            return Ok("Create");
+            try
+            {
+                var command = new CreatePokemonService.Command(name);
+                var result = this.mediator.Send(command).Result;
+                return Ok(result);
+            }
+            catch
+            {
+                return BadRequest($"Invalid name [{name}] for a pokemon.");
+            }
         }
 
         [HttpPost, Route("init")]

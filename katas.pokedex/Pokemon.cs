@@ -11,6 +11,7 @@
 
         public Pokemon(int code, string name)
         {
+            Id = Guid.NewGuid().ToString();
             Code = code;
             Name = name;
         }
